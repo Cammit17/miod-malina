@@ -1,0 +1,94 @@
+*::before,
+*::after,
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background-color: #fdf6d2;
+}
+
+header {
+  width: 100vw;
+  padding: 1rem  1.5rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .logo {
+  width: 127px;
+  height: 54px;
+  background: url("../assets/logo.png") no-repeat center;
+  background-size: cover;
+}
+
+main .first-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: url("../assets/kotlet_tlo.png") no-repeat center;
+  width: 100vw;
+  height: 12rem;
+  overflow: hidden;
+}
+
+main .first-container::before {
+  content: '';
+  position: relative;
+  top: 1.5rem;
+  left: -3rem;
+  width: 40%;
+  height: inherit;
+  background: url("../assets/drugi_kotlet.png") no-repeat center;
+  background-size: cover;
+}
+
+main .first-container::after {
+  content: '';
+  position: relative;
+  top: -1.5rem;
+  right: -3rem;
+  width: 40%;
+  height: inherit;
+  background: url("../assets/kotlet.png") no-repeat center;
+  background-size: cover;
+}
+
+main .first-container .main-text {
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: Pacifico;
+  font-weight: normal;
+  color: #ffd200;
+  position: absolute;
+  left: 20%;
+  margin: 0;
+  width: 12rem;
+}
+
+main .second-container {
+  font-family: 'Raleway';
+}
+
+footer {
+  height: 20%;
+}
+/*# sourceMappingURL=style.css.map */
