@@ -78,9 +78,13 @@ header{
 
 main{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
     width: 100%;
-    top: 0;
-    left: 0;
+    // top: 0;
+    // left: 0;
 
     //container with "Tak jak ty..." text and two meal pictures 
     .first-container{
