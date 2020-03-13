@@ -74,6 +74,7 @@ header .logo {
 main {
   position: relative;
   width: 100%;
+  height: auto;
 }
 
 main .first-container {
