@@ -57,6 +57,12 @@ header {
   background-color: white;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  header {
+    height: 100px;
+  }
+}
+
 header .logo {
   position: relative;
   width: 90px;
