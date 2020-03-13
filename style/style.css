@@ -53,7 +53,7 @@ header {
           flex-direction: row;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 5rem;
   background-color: white;
 }
 
@@ -67,18 +67,6 @@ header .logo {
 
 main {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
   width: 100%;
 }
 
@@ -122,7 +110,6 @@ main .first-container::before {
 main .first-container::after {
   content: '';
   position: relative;
-  top: -2rem;
   right: -2rem;
   width: 45%;
   height: 100%;
