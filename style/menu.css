@@ -1,0 +1,187 @@
+@-webkit-keyframes menuSlideIn {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes menuSlideIn {
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes menuSlideOut {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+}
+
+@keyframes menuSlideOut {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mobile-menu {
+    overflow: hidden;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mobile-menu .toggler {
+    width: 2.4rem;
+    height: inherit;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .mobile-menu .toggler:checked ~ .hamburger > div {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-transform: rotate(135deg) scale(1.2);
+            transform: rotate(135deg) scale(1.2);
+  }
+  .mobile-menu .toggler:checked ~ .hamburger > div::before {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .mobile-menu .toggler:checked ~ .hamburger > div::after {
+    top: 0;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .mobile-menu .toggler:checked ~ .menu {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  .mobile-menu .hamburger {
+    width: 2.5rem;
+    height: inherit;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 4;
+  }
+  .mobile-menu .hamburger div {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: 1.5rem;
+    height: .25rem;
+    background-color: #383838;
+    border-radius: 50px;
+    position: relative;
+  }
+  .mobile-menu .hamburger div::before {
+    content: "";
+    width: 1.5rem;
+    height: inherit;
+    background-color: #383838;
+    position: absolute;
+    border-radius: 50px;
+    top: .5rem;
+  }
+  .mobile-menu .hamburger div::after {
+    content: "";
+    width: 1.5rem;
+    height: inherit;
+    background-color: #383838;
+    position: absolute;
+    border-radius: 50px;
+    top: -.5rem;
+  }
+  .mobile-menu .menu {
+    z-index: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    right: 0;
+    top: 0;
+    background-color: #fdf6d2c9;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+  .mobile-menu .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    font-weight: 500;
+    font-size: 2rem;
+    list-style: none;
+    z-index: 6;
+    opacity: 1;
+    color: #383838;
+  }
+  .mobile-menu .menu ul li {
+    z-index: 6;
+    padding: 1rem 0;
+    letter-spacing: 0.2rem;
+    border-bottom: .5px solid black;
+  }
+  .mobile-menu .menu ul li a {
+    color: #383838;
+    text-decoration: none;
+  }
+}
+/*# sourceMappingURL=menu.css.map */

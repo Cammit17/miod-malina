@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miód malina</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/menu.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,400,500,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo"></div>
-        <nav class="nav-cnt">
-            <!-- <ul>
-                <li>START</li>
-                <li>MENU</li>
-                <li>GALERIA</li>
-                <li>KONTAKT</li>
-            </ul> -->
+        <nav class="nav-container mobile-menu">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+
+            <menu class="menu">
+                <ul>
+                    <li><a href="#">Start</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </menu>
         </nav>
     </header>
 
@@ -27,17 +33,79 @@
         <div class="second-container">
             <div class="form-container">
                 <h2 class="form-head-text">Specjalne Okazje!</h2>
-                <span class="form-second-text">
+                <h3 class="form-second-text">
                     Zapisz się do grona stałych klientów. Z tej okazji przygotujemy dla Ciebie atrakcyje promocje!
-                </span>
+                </h3>
                 <form method="POST" class="form">
+                    <label for="name" class="form-labels">
+                        1. Podaj swoje imię.
+                    </label>
+                    <input name="name" type="text" class="input">
+
+                    <label for="tel" class="form-labels">
+                        2. Podaj swój numer telefonu.
+                    </label>
+                    <input name="tel" type="tel" class="input">
+                    
+                    <label for="email" class="form-labels">
+                        3. Podaj swój adres e-mail.
+                    </label>                    
+                    <input name="email" type="email" class="input">
+
+                    <span class="policy-text">
+                        *Klikając zgadasz się na wysyłanie wiadomości marketingowych drogą elektroniczną na podstawie art.172 prawa telekomunikacyjnego. 
+                    </span>
+
+                    <input type="button" name="button" class="send-button" value="Zapisz się">
                 </form>
+                
             </div>
         </div>
     </main>
 
     <footer>
-        footer
+        <section class="footer-nav">
+            <h4>Na skróty</h4>
+            <ul>
+                <li><a href="#">Start</a></li>
+                <li><a href="#">Specjalne okazje</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </section>
+        <section class="footer-nav">
+            <h4>Specjalne okazje</h4>
+            <ul>
+                <li><a href="#">Zasady promocji</a></li>
+                <li><a href="#">Polityka prywatności</a> </li>
+                <li><a href="#">Zgłoś rezygnacje</a> </li>
+            </ul>
+        </section>
+        <section class="footer-nav">
+            <h4>Lokalizacja</h4>
+            <ul>
+                <li>Budynek szpitala</li>
+                <li>ul.Radomska 70</li>
+                <li>27-200 Starachowice</li>
+                <li></li>
+                <li>ul.Waryńskiego 6</li>
+                <li>27-200</li>
+            </ul>
+        </section>
+        <section class="footer-nav">
+            <h4>Obserwuj nas</h4>
+            <div class="social-media-container">
+                <a href="#">
+                    <img src="./assets/instagram.png" width="20rem" height="20rem" alt="" srcset="">
+                </a>
+                <a href="#">
+                    <img src="./assets/facebook.png" width="20rem" height="20rem" alt="" srcset="">
+                </a>
+            </div>
+        </section>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
