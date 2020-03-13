@@ -48,6 +48,7 @@ body{
 
 header{
     @include flex(space-between, center, row);
+    position: relative;
     padding: .7rem 1rem .7rem 1.3rem;
     width: 100vw;
     height: 60px;
