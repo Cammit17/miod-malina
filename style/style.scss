@@ -91,9 +91,9 @@ main{
         position: relative;
 
 
-        @media #{$mobile-large}{
-            height: 17rem;
-        }
+        // @media #{$mobile-large}{
+        //     height: 17rem;
+        // }
 
         //left meal picture
         &::before{
