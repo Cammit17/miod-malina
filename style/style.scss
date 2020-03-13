@@ -43,6 +43,7 @@ $desktop: 'only screen and (min-width: 1200px)';
 
 body{
     @include flex(space-between, normal, column);
+    position: relative;
     // align-content: space-between;
     width: 100vw;
     height: 100vh;
