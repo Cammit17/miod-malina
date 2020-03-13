@@ -84,6 +84,7 @@ header{
 }
 
 main{
+
     position: relative;
     width: 100%;
     height: auto;
@@ -104,36 +105,36 @@ main{
         }
 
         //left meal picture
-        &::before{
-            content: '';
-            position: relative;
-            top: 1.2rem;
-            left: -2rem;
-            width: 45%;
-            height: 100%;
-            background: url("../assets/drugi_kotlet.png") no-repeat center;
-            background-size: cover;
+        // &::before{
+        //     content: '';
+        //     position: relative;
+        //     top: 1.2rem;
+        //     left: -2rem;
+        //     width: 45%;
+        //     height: 100%;
+        //     background: url("../assets/drugi_kotlet.png") no-repeat center;
+        //     background-size: cover;
             
-            @media #{$mobile-large}{
-                top: 1.5rem;
-            }
-        }
+        //     @media #{$mobile-large}{
+        //         top: 1.5rem;
+        //     }
+        // }
 
-        //right meal picture
-        &::after{
-            content: '';
-            position: relative;
-            top: -2rem;
-            right: -2rem;
-            width: 45%;
-            height: 100%;
-            background: url("../assets/kotlet.png") no-repeat center;
-            background-size: cover;
+        // //right meal picture
+        // &::after{
+        //     content: '';
+        //     position: relative;
+        //     top: -2rem;
+        //     right: -2rem;
+        //     width: 45%;
+        //     height: 100%;
+        //     background: url("../assets/kotlet.png") no-repeat center;
+        //     background-size: cover;
 
-            @media #{$mobile-large}{
-                top: -2.55rem;
-            }
-        }
+        //     @media #{$mobile-large}{
+        //         top: -2.55rem;
+        //     }
+        // }
 
         //"Tak jak ty,..." text
         .main-text{
