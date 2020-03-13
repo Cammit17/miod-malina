@@ -18,9 +18,14 @@ $fonts: (
 
 $form-smobile-width: 200px;
 
-$mobile-small: 'only screen and (max-width: 380px) and (max-height: 700px)';
-$mobile-huge: 'only screen and (min-height: 760px)';
-$mobile-large: 'only screen and (min-height: 730px)';
+$mobile-small: 'only screen and (min-device-width: 320px) and (max-device-width: 568px)';
+
+$mobile-huge: 'only screen and (min-height: 760px) and (max-width: 400px)';
+
+$long-mobile: 'only screen and (min-device-height: 700px) and (max-device-width: 430px)';
+
+$mobile-large: 'only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3)';
+
 $tablet: 'only screen and (min-width: 480px) and (max-width: 1200px)';
 $desktop: 'only screen and (min-width: 1200px)';
 
@@ -37,12 +42,19 @@ $desktop: 'only screen and (min-width: 1200px)';
 }
 
 body{
-    @include flex(normal, normal, column);
+    @include flex(space-between, normal, column);
     // align-content: space-between;
+    width: 100vw;
     height: 100vh;
     margin: 0;
     background-color: map-get($map: $colors, $key: first-color);
     font-family: map-get($map: $fonts, $key: main-font);
+    
+
+    //fixed long mobile main container display
+    @media #{$long-mobile}{
+        justify-content: normal;
+    }
 }
 
 
@@ -50,11 +62,10 @@ header{
     @include flex(space-between, center, row);
     position: relative;
     padding: .7rem 1rem .7rem 1.3rem;
-    width: 100vw;
-    height: 60px;
+    width: 100%;
+    height: 5rem;
     background-color: white;
 
-    //"miod malina" logo
     .logo{
         position: relative;
         width: 90px;
@@ -66,6 +77,7 @@ header{
 
 main{
     position: relative;
+    width: 100vw;
     top: 0;
     left: 0;
 
@@ -75,6 +87,8 @@ main{
         height: 13rem;
         background: url("../assets/kotlet_tlo.png") repeat center;
         overflow: hidden;
+        position: relative;
+
 
         @media #{$mobile-large}{
             height: 17rem;
@@ -128,6 +142,7 @@ main{
                 top: 5.5rem
             }
         }
+
     }
     
     //form container
@@ -215,10 +230,10 @@ main{
                     margin: 1rem 0 0 0;
                     border-radius: 4px;
 
-                    @media #{$mobile-huge}{
-                        width: 5rem;
-                        height: 1.8rem;
-                    }
+                    // @media #{$mobile-huge}{
+                    //     width: 5rem;
+                    //     height: 1.8rem;
+                    // }
                 }
             }
 
@@ -234,7 +249,8 @@ footer{
     @include flex(space-between, normal, row);
     padding: 1.5rem 1.5rem;
 
-    @media #{$mobile-huge}{
+    //this fixed main and footer container position   
+    @media #{$long-mobile}{
         position: absolute;
         bottom: 0;
     }

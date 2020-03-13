@@ -11,9 +11,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
@@ -21,10 +21,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100vw;
   height: 100vh;
   margin: 0;
   background-color: #fdf6d2;
   font-family: Raleway;
+}
+
+@media only screen and (min-device-height: 700px) and (max-device-width: 430px) {
+  body {
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
 }
 
 header {
@@ -43,8 +52,8 @@ header {
           flex-direction: row;
   position: relative;
   padding: .7rem 1rem .7rem 1.3rem;
-  width: 100vw;
-  height: 60px;
+  width: 100%;
+  height: 5rem;
   background-color: white;
 }
 
@@ -58,6 +67,7 @@ header .logo {
 
 main {
   position: relative;
+  width: 100vw;
   top: 0;
   left: 0;
 }
@@ -79,9 +89,10 @@ main .first-container {
   height: 13rem;
   background: url("../assets/kotlet_tlo.png") repeat center;
   overflow: hidden;
+  position: relative;
 }
 
-@media only screen and (min-height: 730px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
   main .first-container {
     height: 17rem;
   }
@@ -98,7 +109,7 @@ main .first-container::before {
   background-size: cover;
 }
 
-@media only screen and (min-height: 730px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
   main .first-container::before {
     top: 1.5rem;
   }
@@ -115,7 +126,7 @@ main .first-container::after {
   background-size: cover;
 }
 
-@media only screen and (min-height: 730px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
   main .first-container::after {
     top: -2.55rem;
   }
@@ -132,7 +143,7 @@ main .first-container .main-text {
   width: 100%;
 }
 
-@media only screen and (min-height: 730px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
   main .first-container .main-text {
     font-size: 1.4rem;
     top: 5.5rem;
@@ -185,7 +196,7 @@ main .second-container .form-container .form-head-text {
   margin: 0 0 .5rem 0;
 }
 
-@media only screen and (min-height: 730px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
   main .second-container .form-container .form-head-text {
     font-size: 1.5rem;
   }
@@ -227,7 +238,7 @@ main .second-container .form-container .form .form-labels {
   width: 200px;
 }
 
-@media only screen and (min-height: 730px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
   main .second-container .form-container .form .form-labels {
     font-size: .55rem;
   }
@@ -271,13 +282,6 @@ main .second-container .form-container .form .send-button {
   border-radius: 4px;
 }
 
-@media only screen and (min-height: 760px) {
-  main .second-container .form-container .form .send-button {
-    width: 5rem;
-    height: 1.8rem;
-  }
-}
-
 footer {
   position: relative;
   width: 100vw;
@@ -297,7 +301,7 @@ footer {
   padding: 1.5rem 1.5rem;
 }
 
-@media only screen and (min-height: 760px) {
+@media only screen and (min-device-height: 700px) and (max-device-width: 430px) {
   footer {
     position: absolute;
     bottom: 0;

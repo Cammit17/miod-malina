@@ -27,7 +27,7 @@ $mobile: 'only screen and (max-width: 480px)';
 @media #{$mobile}{
     .mobile-menu{
         overflow: hidden;
-        height: 40px;
+        height: inherit;
         display: flex;
         justify-content: center;
         align-items: center;
