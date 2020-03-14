@@ -143,11 +143,13 @@
         -ms-flex-pack: center;
             justify-content: center;
     position: absolute;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     right: 0;
     top: 0;
     background-color: #fdf6d2c9;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
     -webkit-transform: scale(0);
             transform: scale(0);
     opacity: 0;
@@ -182,6 +184,12 @@
   .mobile-menu .menu ul li a {
     color: #383838;
     text-decoration: none;
+  }
+  @supports (-ms-accelerator: true) {
+    .mobile-menu .menu {
+      background-color: black;
+      width: 200vw;
+    }
   }
 }
 /*# sourceMappingURL=menu.css.map */

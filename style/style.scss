@@ -63,16 +63,11 @@ body{
 header{
     @include flex(space-between, center, row);
     position: relative;
-    // padding: .7rem 1rem .7rem 1.3rem;
+    padding: .7rem 1rem .7rem 1.3rem;
     width: 100%;
-    height: 50px;
-    min-height: 50px;
+    // height: 50px;
+    min-height: 10%;
     background-color: white;
-
-
-    @media #{$mobile-ip6}{
-        height: 100px;
-    }
 
     .logo{
         position: relative;
@@ -163,7 +158,7 @@ main{
     .second-container{
         @include flex(center, normal, row);
         position: relative;
-        // top: -3rem;
+        top: -3rem;
         
         .form-container{
             @include flex(center, center, column);
@@ -198,7 +193,6 @@ main{
             //whole form styling 
             .form{
                 @include flex(normal, center, column);
-                // align-content: center;
                 width: $form-smobile-width;
 
                 .form-labels{
@@ -240,7 +234,7 @@ main{
                     height: 1.8rem;
                     background-color: map-get($map: $colors, $key: second-color);
                     border: none;
-                    box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
+                    // box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
                     margin: 1rem 0 0 0;
                     border-radius: 4px;
 

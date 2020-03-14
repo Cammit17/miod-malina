@@ -53,16 +53,10 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
+  padding: .7rem 1rem .7rem 1.3rem;
   width: 100%;
-  height: 50px;
-  min-height: 50px;
+  min-height: 10%;
   background-color: white;
-}
-
-@media screen and (min-device-width: 375px) and (max-device-width: 667px) {
-  header {
-    height: 100px;
-  }
 }
 
 header .logo {
@@ -175,6 +169,7 @@ main .second-container {
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
+  top: -3rem;
 }
 
 main .second-container .form-container {
@@ -285,8 +280,6 @@ main .second-container .form-container .form .send-button {
   height: 1.8rem;
   background-color: #ffd200;
   border: none;
-  -webkit-box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
-          box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
   margin: 1rem 0 0 0;
   border-radius: 4px;
 }

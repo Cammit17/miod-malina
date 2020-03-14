@@ -26,7 +26,6 @@ $mobile: 'only screen and (max-width: 480px)';
 
 @media #{$mobile}{
     .mobile-menu{
-        // overflow: hidden;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -115,11 +114,13 @@ $mobile: 'only screen and (max-width: 480px)';
             align-items: center;
             justify-content: center;
             position: absolute;
-            height: 100vh;
+            min-height: 100vh;
+            // height: 100vh;
             width: 100vw;
             right: 0;
             top: 0;
             background-color: $menu-color;
+            backdrop-filter: blur(2px);            
             transform: scale(0);
             opacity: 0;
             transition: all .4s ease;
@@ -152,4 +153,13 @@ $mobile: 'only screen and (max-width: 480px)';
             }
         }
     }
+    
+    @supports (-ms-accelerator:true) {
+        .mobile-menu{
+            .menu{
+                background-color: black;
+                width: 200vw;
+            }
+        }
+      }
 }
