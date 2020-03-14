@@ -28,14 +28,14 @@ $mobile: 'only screen and (max-width: 480px)';
     .mobile-menu{
         // overflow: hidden;
         height: 100%;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
         //checkbox to control menu
         .toggler{
             width: 2.4rem;
-            height: 100%;
+            height: 40px;
             position: absolute;
             opacity: 0;
             cursor: pointer;
@@ -69,7 +69,7 @@ $mobile: 'only screen and (max-width: 480px)';
         //hamburger menu icon
         .hamburger{
             width: 2.5rem;
-            height: 100%;
+            height: 40px;
             position: relative;
             background-color: transparent;
             display: flex;

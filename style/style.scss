@@ -87,6 +87,7 @@ main{
     position: relative;
     width: 100%;
     height: auto;
+    // display: ;
     // top: 0;
     // left: 0;
 
@@ -94,9 +95,12 @@ main{
     .first-container{
         @include flex(space-between, center, row);
         height: 13rem;
+        width: 100vw;
         background: url("../assets/kotlet_tlo.png") repeat center;
         overflow: hidden;
         position: relative;
+        top: 0;
+        left: 0;
 
 
         @media #{$mobile-large}{
@@ -104,36 +108,36 @@ main{
         }
 
         //left meal picture
-        // &::before{
-        //     content: '';
-        //     position: relative;
-        //     top: 1.2rem;
-        //     left: -2rem;
-        //     width: 45%;
-        //     height: 100%;
-        //     background: url("../assets/drugi_kotlet.png") no-repeat center;
-        //     background-size: cover;
+        &::before{
+            content: '';
+            position: relative;
+            top: 1.2rem;
+            left: -2rem;
+            width: 45%;
+            height: 100%;
+            background: url("../assets/drugi_kotlet.png") no-repeat center;
+            background-size: cover;
             
-        //     @media #{$mobile-large}{
-        //         top: 1.5rem;
-        //     }
-        // }
+            @media #{$mobile-large}{
+                top: 1.5rem;
+            }
+        }
 
-        // //right meal picture
-        // &::after{
-        //     content: '';
-        //     position: relative;
-        //     top: -2rem;
-        //     right: -2rem;
-        //     width: 45%;
-        //     height: 100%;
-        //     background: url("../assets/kotlet.png") no-repeat center;
-        //     background-size: cover;
+        //right meal picture
+        &::after{
+            content: '';
+            position: relative;
+            top: -2rem;
+            right: -2rem;
+            width: 45%;
+            height: 100%;
+            background: url("../assets/kotlet.png") no-repeat center;
+            background-size: cover;
 
-        //     @media #{$mobile-large}{
-        //         top: -2.55rem;
-        //     }
-        // }
+            @media #{$mobile-large}{
+                top: -2.55rem;
+            }
+        }
 
         //"Tak jak ty,..." text
         .main-text{
@@ -158,7 +162,7 @@ main{
     .second-container{
         @include flex(center, normal, row);
         position: relative;
-        top: -3rem;
+        // top: -3rem;
         
         .form-container{
             @include flex(center, center, column);
