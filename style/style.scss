@@ -200,7 +200,7 @@ main{
                     }
                 }
 
-                .input{
+                .input-form{
                     @include font(.6rem, 500);
                     font-family: map-get($map: $fonts, $key: main-font);
                     padding: .3rem .3rem;
@@ -228,11 +228,11 @@ main{
                     width: 5rem;
                     height: 1.8rem;
                     background-color: #ffd200;
-                    // border: none;
-                    // box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
-                    // box-shadow: 0px 0px 0px 10px #fff;
+                    border: none;
+                    box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
+                    box-shadow: 0px 0px 0px 10px #fff;
                     margin: 1rem 0 0 0;
-                    // border-radius: 4px;
+                    border-radius: 25%;
 
                     // @media #{$mobile-huge}{
                     //     width: 5rem;
