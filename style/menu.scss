@@ -111,11 +111,8 @@ $mobile: 'only screen and (max-width: 480px)';
             z-index: 1;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             position: absolute;
             min-height: 100vh;
-            // height: 100vh;
             width: 100vw;
             right: 0;
             top: 0;
@@ -131,6 +128,8 @@ $mobile: 'only screen and (max-width: 480px)';
                 flex-direction: column;
                 align-items: center;
                 position: relative;
+                top: 25vh;
+                left: 0;
                 font-weight: 500;
                 font-size: 2rem;
                 list-style: none;
@@ -153,13 +152,4 @@ $mobile: 'only screen and (max-width: 480px)';
             }
         }
     }
-    
-    @supports (-ms-accelerator:true) {
-        .mobile-menu{
-            .menu{
-                background-color: black;
-                width: 200vw;
-            }
-        }
-      }
 }

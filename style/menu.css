@@ -136,12 +136,6 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     position: absolute;
     min-height: 100vh;
     width: 100vw;
@@ -168,6 +162,8 @@
         -ms-flex-align: center;
             align-items: center;
     position: relative;
+    top: 25vh;
+    left: 0;
     font-weight: 500;
     font-size: 2rem;
     list-style: none;
@@ -184,12 +180,6 @@
   .mobile-menu .menu ul li a {
     color: #383838;
     text-decoration: none;
-  }
-  @supports (-ms-accelerator: true) {
-    .mobile-menu .menu {
-      background-color: black;
-      width: 200vw;
-    }
   }
 }
 /*# sourceMappingURL=menu.css.map */
