@@ -201,13 +201,13 @@ main{
                 }
 
                 .input{
-                    @include font(.6rem, 500);
-                    font-family: map-get($map: $fonts, $key: main-font);
-                    padding: .3rem .3rem;
-                    border: none;
-                    background-color: rgb(226, 226, 226);
-                    border-radius: 3px;
-                    width: $form-smobile-width;
+                    // @include font(.6rem, 500);
+                    // font-family: map-get($map: $fonts, $key: main-font);
+                    // padding: .3rem .3rem;
+                    // border: none;
+                    // background-color: rgb(226, 226, 226);
+                    // border-radius: 3px;
+                    // width: $form-smobile-width;
 
                     &:focus{
                         border: .5px solid grey;
