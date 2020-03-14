@@ -41,6 +41,7 @@ $desktop: 'only screen and (min-width: 1200px)';
     font-weight: $-fweight;
 }
 
+
 body{
     @include flex(space-between, normal, column);
     position: relative;
@@ -90,7 +91,6 @@ main{
         @include flex(space-between, center, row);
         height: 13rem;
         width: 100vw;
-        background: url("../assets/kotlet_tlo.png") repeat center;
         overflow: hidden;
         position: relative;
         top: 0;
@@ -304,12 +304,14 @@ footer{
             margin-top: .5rem;
 
             a{
-                .instagram-icon{
+                div.instagram-icon{
                     width: 1.3rem;
                     height: 1.3rem;
+                    position: relative;
                 }
 
-                .facebook-icon{
+                div.facebook-icon{
+                    position: relative;
                     width: 1.3rem;
                     height: 1.3rem;
                 }
@@ -336,7 +338,10 @@ footer{
 
     main{
         .first-container{
-    
+
+            background: url("../assets/kotlet_tlo.png") repeat center;
+            background-size: cover;
+
             &::before{
                 background: url("../assets/drugi_kotlet.png") no-repeat center;
                 background-size: cover;
@@ -353,12 +358,12 @@ footer{
         .footer-nav{
             .social-media-container{
                 a{
-                    .instagram-icon{
+                    div.instagram-icon{
                         background: url("../assets/instagram.png") no-repeat center;
                         background-size: cover;
                     }
 
-                    .facebook-icon{
+                    div.facebook-icon{
                         background: url("../assets/facebook.png") no-repeat center;
                         background-size: cover;
                     }
@@ -382,7 +387,10 @@ footer{
 
     main{
         .first-container{
-    
+            
+            background: url("../assets/kotlet_tlo.webp") repeat center;
+            background-size: cover;
+
             &::before{
                 background: url("../assets/drugi_kotlet.webp") no-repeat center;
                 background-size: cover;
