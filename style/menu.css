@@ -44,12 +44,11 @@
 
 @media only screen and (max-width: 480px) {
   .mobile-menu {
-    overflow: hidden;
-    height: inherit;
+    height: 100%;
   }
   .mobile-menu .toggler {
     width: 2.4rem;
-    height: inherit;
+    height: 100%;
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -78,7 +77,8 @@
   }
   .mobile-menu .hamburger {
     width: 2.5rem;
-    height: inherit;
+    height: 100%;
+    position: relative;
     background-color: transparent;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -89,7 +89,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    z-index: 4;
+    z-index: 3;
   }
   .mobile-menu .hamburger div {
     -webkit-transition: all 0.5s ease;
@@ -119,7 +119,7 @@
     top: -.5rem;
   }
   .mobile-menu .menu {
-    z-index: 3;
+    z-index: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

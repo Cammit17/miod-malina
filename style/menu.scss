@@ -26,8 +26,8 @@ $mobile: 'only screen and (max-width: 480px)';
 
 @media #{$mobile}{
     .mobile-menu{
-        overflow: hidden;
-        height: inherit;
+        // overflow: hidden;
+        height: 100%;
         // display: flex;
         // justify-content: center;
         // align-items: center;
@@ -35,7 +35,7 @@ $mobile: 'only screen and (max-width: 480px)';
         //checkbox to control menu
         .toggler{
             width: 2.4rem;
-            height: inherit;
+            height: 100%;
             position: absolute;
             opacity: 0;
             cursor: pointer;
@@ -66,15 +66,16 @@ $mobile: 'only screen and (max-width: 480px)';
             }
         }
         
-        //menu hamburger icon
+        //hamburger menu icon
         .hamburger{
             width: 2.5rem;
-            height: inherit;
+            height: 100%;
+            position: relative;
             background-color: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 4;
+            z-index: 3;
     
             div{
                 transition: all 0.5s ease;
@@ -108,7 +109,7 @@ $mobile: 'only screen and (max-width: 480px)';
         
         //displayed menu
         .menu{
-            z-index: 3;
+            z-index: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
