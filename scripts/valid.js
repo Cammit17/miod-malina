@@ -137,7 +137,6 @@ class validation{
     
     checkAndSend(submit){
         submit.preventDefault();
-        // this.form.setAttribute('novalidate', 'validate')
         const elementsToCheck = this.getElements();
         let formErrors = false;
         

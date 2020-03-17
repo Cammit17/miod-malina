@@ -39,8 +39,6 @@ $desktop: 'only screen and (min-width: 1000px)';
             &:checked ~ .menu{
                 transform: scale(1);
                 opacity: 1;
-                // animation: .5s menuSlideIn  ease both alternate;
-                // overflow: hidden;
             }
         }
         
@@ -126,7 +124,6 @@ $desktop: 'only screen and (min-width: 1000px)';
                         text-decoration: none;
                     }
                 }
-                
             }
         }
     }

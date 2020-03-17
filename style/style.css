@@ -278,7 +278,7 @@ main .second-container .form-container {
 main .second-container .form-container .form-head-text {
   font-size: 1.3rem;
   font-weight: 700;
-  margin: 0 0 .5rem 0;
+  margin: 3% 0 .5rem 0;
 }
 
 @media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
@@ -352,6 +352,7 @@ main .second-container .form-container .form {
 @media only screen and (min-width: 1024px) {
   main .second-container .form-container .form {
     width: 400px;
+    margin-bottom: 3%;
   }
 }
 
