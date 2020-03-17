@@ -1,28 +1,7 @@
 $hamburger-color: #383838;
 $menu-color: #fdf6d2c9;
-$mobile: 'only screen and (max-width: 480px)';
-
-@keyframes menuSlideIn{
-    from{
-        transform: translateX(200%);
-        // transform: scale(0);
-    }
-    to{
-        transform: translateX(0);
-        // transform: scale(1);
-    }
-}
-
-@keyframes menuSlideOut{
-    from{
-        transform: translateX(0);
-        // transform: scale(0);
-    }
-    to{
-        transform: translateX(200%);
-        // transform: scale(1);
-    }
-}
+$mobile: 'only screen and (max-device-width: 800px)';
+$desktop: 'only screen and (min-width: 1000px)';
 
 @media #{$mobile}{
     .mobile-menu{
@@ -56,7 +35,7 @@ $mobile: 'only screen and (max-width: 480px)';
                 transform: rotate(-90deg);
             }
 
-            //making menu vissible
+            //menu on
             &:checked ~ .menu{
                 transform: scale(1);
                 opacity: 1;
@@ -65,7 +44,7 @@ $mobile: 'only screen and (max-width: 480px)';
             }
         }
         
-        //hamburger menu icon
+        //hamburger-menu icon
         .hamburger{
             width: 2.5rem;
             height: 40px;
@@ -106,7 +85,7 @@ $mobile: 'only screen and (max-width: 480px)';
             }
         }
         
-        //displayed menu
+        //menu
         .menu{
             z-index: 1;
             display: flex;
@@ -121,7 +100,6 @@ $mobile: 'only screen and (max-width: 480px)';
             transform: scale(0);
             opacity: 0;
             transition: all .4s ease;
-
 
             ul{
                 display: flex;
@@ -149,6 +127,43 @@ $mobile: 'only screen and (max-width: 480px)';
                     }
                 }
                 
+            }
+        }
+    }
+}
+
+
+//desktop menu
+
+@media #{$desktop}{
+    .desktop-menu{
+
+        .menu{
+            font-size: 1.4rem;
+            font-weight: 600;
+
+            ul{
+                list-style: none;
+                display: flex;
+
+                li{
+                    margin-right: 1rem;
+                    
+                    a{
+                        color: $hamburger-color;
+                        text-decoration: none;
+                        letter-spacing: 1.2px;
+
+                        &:hover{
+                            transition: color .5s ease;
+                            color: gray;
+                        }
+                    }
+
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
             }
         }
     }

@@ -22,6 +22,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  overflow-x: hidden;
   width: 100vw;
   height: 100vh;
   max-height: 110vh;
@@ -31,7 +32,7 @@ body {
   font-family: Raleway;
 }
 
-@media only screen and (min-device-height: 700px) and (max-device-width: 430px) {
+@media only screen and (min-device-height: 750px) {
   body {
     -webkit-box-pack: normal;
         -ms-flex-pack: normal;
@@ -54,9 +55,10 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
-  padding: .7rem 1rem .7rem 1.3rem;
+  padding: .7rem  1.5rem .7rem 1.3rem;
   width: 100%;
-  min-height: 10%;
+  height: auto;
+  z-index: 2;
   background-color: white;
 }
 
@@ -64,6 +66,26 @@ header .logo {
   position: relative;
   width: 90px;
   height: 40px;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  header {
+    padding: 1.5% 8% 1.5% 5%;
+  }
+  header .logo {
+    width: 140px;
+    height: 60px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    padding: 1.5% 15% 1.5% 10%;
+  }
+  header .logo {
+    width: 140px;
+    height: 60px;
+  }
 }
 
 main {
@@ -92,41 +114,80 @@ main .first-container {
   position: relative;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
   main .first-container {
     height: 17rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px), only screen and (min-width: 1024px) {
+  main .first-container {
+    height: 22rem;
   }
 }
 
 main .first-container::before {
   content: '';
   position: relative;
-  top: 1.2rem;
+  top: 2rem;
   left: -2rem;
   width: 45%;
   height: 100%;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
   main .first-container::before {
-    top: 1.5rem;
+    top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .first-container::before {
+    top: 0;
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .first-container::before {
+    height: 100%;
+    width: 30%;
+    top: 0;
+    left: 0;
   }
 }
 
 main .first-container::after {
   content: '';
   position: relative;
-  top: -2rem;
+  top: -1.85rem;
   right: -2rem;
   width: 45%;
   height: 100%;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
   main .first-container::after {
-    top: -2.55rem;
+    top: -2.4rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .first-container::after {
+    top: -2rem;
+    width: 42%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .first-container::after {
+    height: 100%;
+    width: 34%;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -141,10 +202,24 @@ main .first-container .main-text {
   width: 100%;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
   main .first-container .main-text {
     font-size: 1.4rem;
     top: 5.5rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .first-container .main-text {
+    top: 4.5rem;
+    font-size: 2.3rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .first-container .main-text {
+    top: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -188,15 +263,39 @@ main .second-container .form-container {
           box-shadow: 2px 4px 7px 0px rgba(131, 131, 131, 0.3);
 }
 
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .second-container .form-container {
+    width: 65%;
+  }
+}
+
 main .second-container .form-container .form-head-text {
   font-size: 1.3rem;
   font-weight: 700;
   margin: 0 0 .5rem 0;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
   main .second-container .form-container .form-head-text {
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form-head-text {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .second-container .form-container .form-head-text {
+    font-size: 2.5rem;
   }
 }
 
@@ -208,8 +307,23 @@ main .second-container .form-container .form-second-text {
   width: 200px;
   border-left: 4px solid #ffd200;
   padding-left: .3rem;
-  margin: 0 0 0.5rem 0;
+  margin: 0.2rem 0 .5rem 0;
   border-radius: 3px;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form-second-text {
+    font-size: .8rem;
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .second-container .form-container .form-second-text {
+    line-height: 1.2rem;
+    font-size: 1rem;
+    width: 400px;
+  }
 }
 
 main .second-container .form-container .form {
@@ -229,16 +343,40 @@ main .second-container .form-container .form {
   width: 200px;
 }
 
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .second-container .form-container .form {
+    width: 400px;
+  }
+}
+
 main .second-container .form-container .form .form-labels {
   font-size: 0.5rem;
   font-weight: 500;
   margin: .5rem 0 .3rem 0;
-  width: 200px;
+  width: inherit;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 830px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
   main .second-container .form-container .form .form-labels {
     font-size: .55rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form .form-labels {
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .second-container .form-container .form .form-labels {
+    font-size: 1rem;
   }
 }
 
@@ -247,15 +385,21 @@ main .second-container .form-container .form .input-form {
   font-weight: 500;
   font-family: Raleway;
   padding: .3rem .3rem;
-  border: none;
   background-color: #e2e2e2;
   border-radius: 3px;
-  width: 200px;
+  width: inherit;
 }
 
-main .second-container .form-container .form .input-form:focus {
-  border: .5px solid grey;
-  outline: none;
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form .input-form {
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .second-container .form-container .form .input-form {
+    font-size: 1rem;
+  }
 }
 
 main .second-container .form-container .form .policy-text {
@@ -264,6 +408,19 @@ main .second-container .form-container .form .policy-text {
   text-align: center;
   padding: .5rem 0;
   border-bottom: 0.5px solid #e2e2e2;
+  letter-spacing: .5px;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form .policy-text {
+    font-size: .4rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .second-container .form-container .form .policy-text {
+    font-size: .6rem;
+  }
 }
 
 main .second-container .form-container .form #send-button {
@@ -278,9 +435,34 @@ main .second-container .form-container .form #send-button {
           box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
   margin: 1rem 0 0 0;
   border-radius: 5px;
+  outline: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  main .second-container .form-container .form #send-button {
+    width: 7rem;
+    height: 2.5rem;
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .second-container .form-container .form #send-button {
+    width: 9rem;
+    height: 3.3rem;
+    font-size: 1rem;
+  }
+}
+
+main .second-container .form-container .form #send-button:hover {
+  background-color: #838175;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
 }
 
 footer {
@@ -289,9 +471,42 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3% 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  footer {
+    padding: 5% 0 3% 0;
+  }
+}
+
+footer::before {
+  content: "";
+  position: relative;
+  width: 2rem;
+  height: .3rem;
+  left: -33vw;
+  top: -18%;
+  background-color: #ffd200;
+  border-radius: 4px;
+}
+
+footer .footer-nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
@@ -299,30 +514,19 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 1.5rem 1.5rem;
-}
-
-@media only screen and (min-device-height: 700px) and (max-device-width: 430px) {
-  footer {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-footer::before {
-  content: "";
-  position: absolute;
-  width: 2rem;
-  height: .3rem;
-  left: 1.5rem;
-  top: -.5rem;
-  background-color: #ffd200;
-  border-radius: 4px;
+  position: relative;
+  width: 75%;
+  padding-bottom: 2%;
+  border-bottom: 0.1px solid #a8a8a8;
 }
 
 footer .footer-nav {
   font-size: 0.55rem;
   font-weight: 500;
+}
+
+footer .footer-nav:last-child {
+  margin-right: 0;
 }
 
 footer .footer-nav h4 {
@@ -333,9 +537,9 @@ footer .footer-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
@@ -363,13 +567,34 @@ footer .footer-nav ul li a:visited {
   text-decoration: none;
 }
 
+footer .footer-nav ul li a:hover {
+  color: gray;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  footer .footer-nav {
+    font-size: .9rem;
+  }
+  footer .footer-nav ul {
+    font-size: .7rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  footer .footer-nav {
+    font-size: .9rem;
+  }
+  footer .footer-nav ul {
+    font-size: .8rem;
+  }
+}
+
 footer .footer-nav .social-media-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -390,6 +615,63 @@ footer .footer-nav .social-media-container a div.facebook-icon {
   position: relative;
   width: 1.3rem;
   height: 1.3rem;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  footer .footer-nav .social-media-container a div.instagram-icon {
+    width: 2.1rem;
+    height: 2rem;
+  }
+  footer .footer-nav .social-media-container a div.facebook-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  footer .footer-nav .social-media-container a div.instagram-icon {
+    width: 2.34rem;
+    height: 2.3rem;
+  }
+  footer .footer-nav .social-media-container a div.facebook-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+footer .footer-nav .login {
+  position: relative;
+  display: block;
+  margin-top: .5rem;
+}
+
+footer .footer-nav .login a {
+  color: black;
+  text-decoration: none;
+}
+
+footer .footer-nav .login a:hover {
+  color: gray;
+}
+
+.copyright {
+  margin-top: 2%;
+  font-size: 0.3rem;
+  font-weight: 500;
+  position: relative;
+  color: black;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  .copyright {
+    font-size: .6rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .copyright {
+    font-size: .9rem;
+  }
 }
 
 .no-webp header .logo {
