@@ -32,14 +32,6 @@ body {
   font-family: Raleway;
 }
 
-@media only screen and (min-device-height: 750px) {
-  body {
-    -webkit-box-pack: normal;
-        -ms-flex-pack: normal;
-            justify-content: normal;
-  }
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,6 +85,12 @@ main {
   position: relative;
   width: 100%;
   height: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    height: 100%;
+  }
 }
 
 main .first-container {

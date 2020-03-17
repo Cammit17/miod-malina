@@ -51,11 +51,6 @@ body{
     padding: 0;
     background-color: map-get($map: $colors, $key: first-color);
     font-family: map-get($map: $fonts, $key: main-font);
-    
-
-    @media #{$long-mobile}{
-        justify-content: normal;
-    }
 }
 
 
@@ -98,6 +93,9 @@ main{
     width: 100%;
     height: auto;
 
+    @media #{$desktop}{
+        height: 100%;
+    }
     //container with "Tak jak ty..." text and two meal images
     .first-container{
         @include flex(space-between, center, row);
