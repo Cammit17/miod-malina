@@ -6,12 +6,14 @@
     <title>Miód malina</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/valid.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,400,500,600,700&display=swap" rel="stylesheet">
+    <!-- <link rel="icon" type="image/ico" href="assets/logo.png"/> -->
 </head>
 <body>
     <header>
         <div class="logo"></div>
-        <nav class="nav-container mobile-menu">
+        <nav class="nav-container">
             <input type="checkbox" class="toggler">
             <div class="hamburger"><div></div></div>
 
@@ -40,23 +42,23 @@
                     <label for="name" class="form-labels">
                         1. Podaj swoje imię.
                     </label>
-                    <input name="name" type="text" class="input-form">
+                    <input name="name" type="text" class="input-form no-error" data-error="Wpisz prawidłowe imię" pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]" required is-validation='false'>
 
                     <label for="tel" class="form-labels">
                         2. Podaj swój numer telefonu.
                     </label>
-                    <input name="tel" type="tel" class="input-form">
+                    <input name="tel" type="tel" class="input-form no-error" required pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{3})$" is-validation='false'>
                     
                     <label for="email" class="form-labels">
                         3. Podaj swój adres e-mail.
                     </label>                    
-                    <input name="email" type="email" class="input-form">
+                    <input name="email" type="email" class="input-form no-error" data-error="Wpisz poprawny adres email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required is-validation='false'>
 
                     <span class="policy-text">
                         *Klikając zgadasz się na wysyłanie wiadomości marketingowych drogą elektroniczną na podstawie art.172 prawa telekomunikacyjnego. 
                     </span>
 
-                    <input type="button" name="button" id="send-button" value="Zapisz się">
+                    <input type="submit" name="button" id="send-button" value="Zapisz się">
                 </form>
                 
             </div>
@@ -64,50 +66,55 @@
     </main>
 
     <footer>
-        <section class="footer-nav">
-            <h4>Na skróty</h4>
-            <ul>
-                <li><a href="#">Start</a></li>
-                <li><a href="#">Specjalne okazje</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
+        <section class='footer-nav-container'>
+
+            <section class="footer-nav">
+                <h4>Na skróty</h4>
+                <ul>
+                    <li><a href="#">Start</a></li>
+                    <li><a href="#">Specjalne okazje</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </section>
+            <section class="footer-nav">
+                <h4>Specjalne okazje</h4>
+                <ul>
+                    <li><a href="#">Zasady promocji</a></li>
+                    <li><a href="#">Polityka prywatności</a> </li>
+                    <li><a href="#">Zgłoś rezygnacje</a> </li>
+                </ul>
+            </section>
+            <section class="footer-nav">
+                <h4>Lokalizacja</h4>
+                <ul>
+                    <li>Budynek szpitala</li>
+                    <li>ul.Radomska 70</li>
+                    <li>27-200 Starachowice</li>
+                    <br>
+                    <li>ul.Waryńskiego 6</li>
+                    <li>27-200 Starachowice</li>
+                </ul>
+            </section>
+            <section class="footer-nav">
+                <h4>Obserwuj nas</h4>
+                <div class="social-media-container">
+                    <a href="#">
+                        <div class="instagram-icon"></div>
+                    </a>
+                    <a href="#">
+                        <div class="facebook-icon"></div>
+                    </a>
+                </div>
+                <span class="login"><a href="">zaloguj sie</a></span>
+            </section>
         </section>
-        <section class="footer-nav">
-            <h4>Specjalne okazje</h4>
-            <ul>
-                <li><a href="#">Zasady promocji</a></li>
-                <li><a href="#">Polityka prywatności</a> </li>
-                <li><a href="#">Zgłoś rezygnacje</a> </li>
-            </ul>
-        </section>
-        <section class="footer-nav">
-            <h4>Lokalizacja</h4>
-            <ul>
-                <li>Budynek szpitala</li>
-                <li>ul.Radomska 70</li>
-                <li>27-200 Starachowice</li>
-                <li></li>
-                <li>ul.Waryńskiego 6</li>
-                <li>27-200</li>
-            </ul>
-        </section>
-        <section class="footer-nav">
-            <h4>Obserwuj nas</h4>
-            <div class="social-media-container">
-                <a href="#">
-                    <div class="instagram-icon"></div>
-                </a>
-                <a href="#">
-                    <div class="facebook-icon"></div>
-                </a>
-            </div>
-            <span><a href="">zaloguj sie</a></span>
-        </section>
+        <p class="copyright">Copyright 2020 © Miód Malina Wszystkie Prawa Zastrzeżone</p>
     </footer>
 
     <script src="scripts/fix_menu_height.js"></script>
+    <script src="scripts/valid.js"></script>
     <script>
         /*! modernizr 3.6.0 (Custom Build) | MIT *
  * https://modernizr.com/download/?-webp-setclasses !*/
