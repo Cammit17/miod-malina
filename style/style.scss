@@ -111,8 +111,12 @@ main{
             height: 17rem;
         }
 
-        @media #{$tablet}, #{$desktop}{
+        @media #{$tablet}{
             height: 22rem;
+        }
+
+        @media #{$desktop}{
+            height: 30rem;
         }
 
         //left meal picture
@@ -135,9 +139,9 @@ main{
 
             @media #{$desktop} {
                 height: 100%;
-                width: 30%;
+                width: 40%;
                 top:0;
-                left:0;
+                left:-1rem;
             }
         }
 
@@ -160,10 +164,9 @@ main{
             }
 
             @media #{$desktop} {
-                height: 100%;
-                width: 34%;
-                top:0;
-                left:0;
+                width: 45%;
+                top: 0;
+                right: -4rem;
             }
         }
 
@@ -176,6 +179,7 @@ main{
             position: absolute;
             top: 3rem;
             width: 100%;
+            height: auto;
 
             @media #{$mobile}{
                 font-size: 1.4rem;
@@ -188,7 +192,7 @@ main{
             }
 
             @media #{$desktop}{
-                top: 4rem;
+                top: 25%;
                 font-size: 3rem;
             }
         }

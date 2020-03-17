@@ -121,9 +121,15 @@ main .first-container {
   }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 1024px), only screen and (min-width: 1024px) {
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
   main .first-container {
     height: 22rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .first-container {
+    height: 30rem;
   }
 }
 
@@ -152,9 +158,9 @@ main .first-container::before {
 @media only screen and (min-width: 1024px) {
   main .first-container::before {
     height: 100%;
-    width: 30%;
+    width: 40%;
     top: 0;
-    left: 0;
+    left: -1rem;
   }
 }
 
@@ -182,10 +188,9 @@ main .first-container::after {
 
 @media only screen and (min-width: 1024px) {
   main .first-container::after {
-    height: 100%;
-    width: 34%;
+    width: 45%;
     top: 0;
-    left: 0;
+    right: -4rem;
   }
 }
 
@@ -198,6 +203,7 @@ main .first-container .main-text {
   position: absolute;
   top: 3rem;
   width: 100%;
+  height: auto;
 }
 
 @media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
@@ -216,7 +222,7 @@ main .first-container .main-text {
 
 @media only screen and (min-width: 1024px) {
   main .first-container .main-text {
-    top: 4rem;
+    top: 25%;
     font-size: 3rem;
   }
 }
