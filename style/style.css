@@ -24,8 +24,7 @@ body {
   position: relative;
   overflow-x: hidden;
   width: 100vw;
-  height: 100vh;
-  max-height: 110vh;
+  height: auto;
   margin: 0;
   padding: 0;
   background-color: #fdf6d2;
@@ -496,7 +495,7 @@ footer::before {
   width: 2rem;
   height: .3rem;
   left: -33vw;
-  top: -18%;
+  top: -1.5rem;
   background-color: #ffd200;
   border-radius: 4px;
 }
