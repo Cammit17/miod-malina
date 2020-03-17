@@ -63,7 +63,7 @@ header{
     @include flex(space-between, center, row);
     position: relative;
     padding: .7rem  1.5rem .7rem 1.3rem;
-    
+    min-height: 12%;
     width: 100%;
     height: auto;
     z-index: 2;
@@ -514,6 +514,7 @@ footer{
     @include font(.3rem, 500);
     position: relative;
     color: black;
+    display:block;
     
     @media #{$tablet}{
         font-size: .6rem
