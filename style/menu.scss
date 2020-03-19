@@ -1,7 +1,7 @@
 $hamburger-color: #383838;
 $menu-color: #fdf6d2c9;
 $mobile: 'only screen and (max-device-width: 800px)';
-$desktop: 'only screen and (min-width: 1000px)';
+$desktop: 'only screen and (min-device-width: 800px)';
 
 @media #{$mobile}{
     .mobile-menu{
@@ -144,10 +144,10 @@ $desktop: 'only screen and (min-width: 1000px)';
                 display: flex;
 
                 li{
-                    margin-right: 1rem;
+                    margin-right: 3rem;
                     
                     a{
-                        color: $hamburger-color;
+                        color: black;
                         text-decoration: none;
                         letter-spacing: 1.2px;
 
@@ -157,9 +157,9 @@ $desktop: 'only screen and (min-width: 1000px)';
                         }
                     }
 
-                    &:last-child{
-                        margin-right: 0;
-                    }
+                    // &:last-child{
+                    //     margin-right: 0;
+                    // }
                 }
             }
         }

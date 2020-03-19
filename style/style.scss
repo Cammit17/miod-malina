@@ -17,7 +17,7 @@ $fonts: (
 );
 
 $form-mobile-width: 200px;
-$form-tablet-width: 300px;
+$form-tablet-width: 320px;
 $form-desktop-width: 400px;
 
 $mobile: 'only screen and (min-device-width: 350px) and (max-device-width: 568px)';
@@ -25,7 +25,7 @@ $mobile: 'only screen and (min-device-width: 350px) and (max-device-width: 568px
 $long-mobile: 'only screen and (min-device-height: 750px)';
 
 $tablet: 'only screen and (min-width: 480px) and (max-width: 1024px)';
-$desktop: 'only screen and (min-width: 1024px)';
+$desktop: 'only screen and (min-device-width: 1024px)';
 
 @mixin flex ($-jcont, $-aitem, $-fdir){
     display: flex;
@@ -96,19 +96,19 @@ main{
     @media #{$desktop}{
         height: 100%;
     }
+
     //container with "Tak jak ty..." text and two meal images
     .first-container{
         @include flex(space-between, center, row);
-        height: 13rem;
+        height: 12rem;
         width: 100vw;
         overflow: hidden;
         position: relative;
         top: 0;
         left: 0;
-        z-index: -1;
 
         @media #{$mobile}{
-            height: 17rem;
+            height: 14rem;
         }
 
         @media #{$tablet}{
@@ -116,21 +116,21 @@ main{
         }
 
         @media #{$desktop}{
-            height: 30rem;
+            height: 30vw;
         }
 
-        //left meal picture
+        //left meal image
         &::before{
             content: '';
-            position: relative;
-            top: 2rem;
-            left: -2rem;
-            width: 45%;
+            position: absolute;
+            // top: 2rem;
+            left: -2.5rem;
+            width: 50%;
             height: 100%;
         
-            @media #{$mobile}{
-                top: 2rem;
-            }
+            // @media #{$mobile}{
+            //     top: 2rem;
+            // }
 
             @media #{$tablet}{
                 top: 0;
@@ -139,24 +139,24 @@ main{
 
             @media #{$desktop} {
                 height: 100%;
-                width: 40%;
+                width: 30%;
                 top:0;
                 left:-1rem;
             }
         }
 
-        //right meal picture
+        //right meal image
         &::after{
             content: '';
-            position: relative;
-            top: -1.85rem;
-            right: -2rem;
-            width: 45%;
+            position: absolute;
+            // top: -.85rem;
+            right: -4rem;
+            width: 58%;
             height: 100%;
 
-            @media #{$mobile}{
-                top: -2.4rem;
-            }
+            // @media #{$mobile}{
+            //     top: -2.4rem;
+            // }
 
             @media #{$tablet}{
                 top: -2rem;
@@ -164,9 +164,9 @@ main{
             }
 
             @media #{$desktop} {
-                width: 45%;
+                width: 30%;
                 top: 0;
-                right: -4rem;
+                right: -1rem;
             }
         }
 
@@ -176,24 +176,23 @@ main{
             font-family: map-get($map: $fonts, $key: "second-font");
             text-align: center;
             color: map-get($map: $colors, $key: "second-color");
-            position: absolute;
-            top: 3rem;
+            position: relative;
+            top: -1rem;
             width: 100%;
             height: auto;
+            z-index: 1;
 
             @media #{$mobile}{
                 font-size: 1.4rem;
-                top: 5.5rem
             }
 
             @media #{$tablet}{
-                top: 4.5rem;
-                font-size: 2.3rem;
+                font-size: 2.7rem;
             }
 
             @media #{$desktop}{
-                top: 25%;
-                font-size: 3rem;
+                top: -10%;
+                font-size: 3.3rem;
             }
         }
 
@@ -206,10 +205,10 @@ main{
         top: -3rem;
         
         .form-container{
-            @include flex(center, center, column);
-            background-color: white;
+            @include flex(normal, center, column);
             width: 90%;
-            padding: 1rem 2rem;
+            background-color: white;
+            padding: 1.5rem 0;
             border-radius: 10px;
             box-shadow: 2px 4px 7px 0px rgba(131, 131, 131, 0.3);
 
@@ -223,18 +222,20 @@ main{
             //"Specjalne okazje!" text
             .form-head-text{
                 @include font(1.3rem, 700);
-                margin: 3% 0 .5rem 0;
+                margin: 0 0 .5rem 0;
 
                 @media #{$mobile}{
                     font-size: 1.5rem;
                 }
 
                 @media #{$tablet}{
-                    font-size: 2.2rem;
+                    margin-bottom: .8rem;
+                    font-size: 2.3rem;
                 }
 
                 @media #{$desktop}{
-                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
                 }
             }
 
@@ -246,17 +247,17 @@ main{
                 width: $form-mobile-width;
                 border-left: 4px solid map-get($map: $colors, $key: second-color);
                 padding-left: .3rem;
-                margin: 0.2rem 0 .5rem 0;
                 border-radius: 3px;
 
                 @media #{$tablet}{
                     font-size: .8rem;
                     width: $form-tablet-width;
+                    // margin-bottom: .8rem;
                 }
 
                 @media #{$desktop}{
                     line-height: 1.2rem;
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                     width: $form-desktop-width;
                 }
             }
@@ -272,11 +273,12 @@ main{
 
                 @media #{$desktop} {
                     width: $form-desktop-width;  
-                    margin-bottom: 3%; 
+                    // margin-bottom: 3%; 
                 }
+
                 .form-labels{
                     @include font(.5rem, 500);
-                    margin: .5rem 0 .3rem 0;
+                    margin: .7rem 0 .3rem 0;
                     width: inherit;
 
                     @media #{$mobile}{
@@ -284,10 +286,12 @@ main{
                     }
 
                     @media #{$tablet}{
+                        margin: 1rem 0 .5rem 0;
                         font-size: .8rem;
                     }
 
                     @media #{$desktop}{
+                        margin: 1.5rem 0 .5rem 0;
                         font-size: 1rem;
                     }
                 }
@@ -333,7 +337,7 @@ main{
                     background-color: map-get($map: $colors, $key: second-color);
                     border: none;
                     box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
-                    margin: 1rem 0 0 0;
+                    margin: .5rem 0 0 0;
                     border-radius: 5px;
                     outline: none;
                     appearance: none;
@@ -368,11 +372,7 @@ footer{
     position: relative;
     width: 100vw;
     @include flex(center, center, column);
-    padding: 3% 0;
-    
-    @media #{$desktop}{
-        padding: 5% 0 3% 0;
-    }
+    margin-top: 8%;
 
     //yellow rectangle
     &::before{
@@ -380,28 +380,38 @@ footer{
         position: relative;
         width: 2rem;
         height: .3rem;
-        left: -33vw;
+        left: -37.5%;
         top: -1.5rem;
         background-color: map-get($map: $colors, $key: second-color);
         border-radius: 4px;
+
+        @media #{$desktop}{
+            left: -31%;
+            top: -3rem;
+            width: 3rem;
+            height: .5rem;
+        }
     }
 
     .footer-nav-container{
-        @include flex(space-around, normal, row);
+        @include flex(space-between, normal, row);
         position: relative;
-        width: 75%;
-        padding-bottom: 2%;
+        width: 85%;
+        padding-bottom: 5%;
         border-bottom: .1px solid rgb(168, 168, 168);
 
+        @media #{$tablet}{
+            width: 80%;
+        }
+
+        @media #{$desktop}{
+            width: 65%;
+        }
     }
     
-    //second nav block
+    //bottom nav sections
     .footer-nav{
         @include font(.55rem, 500);
-        
-        &:last-child{
-            margin-right: 0;
-        }
         
         h4{
             margin: 0 0 .4rem 0;
@@ -512,7 +522,7 @@ footer{
 
 }
 .copyright{
-    margin-top: 2%;
+    margin: 5% 0;
     @include font(.3rem, 500);
     position: relative;
     color: black;

@@ -70,7 +70,7 @@ header .logo {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   header {
     padding: 1.5% 15% 1.5% 10%;
   }
@@ -86,7 +86,7 @@ main {
   height: auto;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main {
     height: 100%;
   }
@@ -106,18 +106,17 @@ main .first-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 13rem;
+  height: 12rem;
   width: 100vw;
   overflow: hidden;
   position: relative;
   top: 0;
   left: 0;
-  z-index: -1;
 }
 
 @media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
   main .first-container {
-    height: 17rem;
+    height: 14rem;
   }
 }
 
@@ -127,25 +126,18 @@ main .first-container {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .first-container {
-    height: 30rem;
+    height: 30vw;
   }
 }
 
 main .first-container::before {
   content: '';
-  position: relative;
-  top: 2rem;
-  left: -2rem;
-  width: 45%;
+  position: absolute;
+  left: -2.5rem;
+  width: 50%;
   height: 100%;
-}
-
-@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
-  main .first-container::before {
-    top: 2rem;
-  }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
@@ -155,10 +147,10 @@ main .first-container::before {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .first-container::before {
     height: 100%;
-    width: 40%;
+    width: 30%;
     top: 0;
     left: -1rem;
   }
@@ -166,17 +158,10 @@ main .first-container::before {
 
 main .first-container::after {
   content: '';
-  position: relative;
-  top: -1.85rem;
-  right: -2rem;
-  width: 45%;
+  position: absolute;
+  right: -4rem;
+  width: 58%;
   height: 100%;
-}
-
-@media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
-  main .first-container::after {
-    top: -2.4rem;
-  }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
@@ -186,11 +171,11 @@ main .first-container::after {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .first-container::after {
-    width: 45%;
+    width: 30%;
     top: 0;
-    right: -4rem;
+    right: -1rem;
   }
 }
 
@@ -200,30 +185,29 @@ main .first-container .main-text {
   font-family: Pacifico;
   text-align: center;
   color: #ffd200;
-  position: absolute;
-  top: 3rem;
+  position: relative;
+  top: -1rem;
   width: 100%;
   height: auto;
+  z-index: 1;
 }
 
 @media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
   main .first-container .main-text {
     font-size: 1.4rem;
-    top: 5.5rem;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
   main .first-container .main-text {
-    top: 4.5rem;
-    font-size: 2.3rem;
+    font-size: 2.7rem;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .first-container .main-text {
-    top: 25%;
-    font-size: 3rem;
+    top: -10%;
+    font-size: 3.3rem;
   }
 }
 
@@ -249,9 +233,9 @@ main .second-container .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -259,9 +243,9 @@ main .second-container .form-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: white;
   width: 90%;
-  padding: 1rem 2rem;
+  background-color: white;
+  padding: 1.5rem 0;
   border-radius: 10px;
   -webkit-box-shadow: 2px 4px 7px 0px rgba(131, 131, 131, 0.3);
           box-shadow: 2px 4px 7px 0px rgba(131, 131, 131, 0.3);
@@ -273,7 +257,7 @@ main .second-container .form-container {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .second-container .form-container {
     width: 65%;
   }
@@ -282,7 +266,7 @@ main .second-container .form-container {
 main .second-container .form-container .form-head-text {
   font-size: 1.3rem;
   font-weight: 700;
-  margin: 3% 0 .5rem 0;
+  margin: 0 0 .5rem 0;
 }
 
 @media only screen and (min-device-width: 350px) and (max-device-width: 568px) {
@@ -293,13 +277,15 @@ main .second-container .form-container .form-head-text {
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
   main .second-container .form-container .form-head-text {
-    font-size: 2.2rem;
+    margin-bottom: .8rem;
+    font-size: 2.3rem;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .second-container .form-container .form-head-text {
-    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
   }
 }
 
@@ -311,21 +297,20 @@ main .second-container .form-container .form-second-text {
   width: 200px;
   border-left: 4px solid #ffd200;
   padding-left: .3rem;
-  margin: 0.2rem 0 .5rem 0;
   border-radius: 3px;
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
   main .second-container .form-container .form-second-text {
     font-size: .8rem;
-    width: 300px;
+    width: 320px;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .second-container .form-container .form-second-text {
     line-height: 1.2rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     width: 400px;
   }
 }
@@ -349,21 +334,20 @@ main .second-container .form-container .form {
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
   main .second-container .form-container .form {
-    width: 300px;
+    width: 320px;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .second-container .form-container .form {
     width: 400px;
-    margin-bottom: 3%;
   }
 }
 
 main .second-container .form-container .form .form-labels {
   font-size: 0.5rem;
   font-weight: 500;
-  margin: .5rem 0 .3rem 0;
+  margin: .7rem 0 .3rem 0;
   width: inherit;
 }
 
@@ -375,12 +359,14 @@ main .second-container .form-container .form .form-labels {
 
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
   main .second-container .form-container .form .form-labels {
+    margin: 1rem 0 .5rem 0;
     font-size: .8rem;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .second-container .form-container .form .form-labels {
+    margin: 1.5rem 0 .5rem 0;
     font-size: 1rem;
   }
 }
@@ -401,7 +387,7 @@ main .second-container .form-container .form .input-form {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .second-container .form-container .form .input-form {
     font-size: 1rem;
   }
@@ -422,7 +408,7 @@ main .second-container .form-container .form .policy-text {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .second-container .form-container .form .policy-text {
     font-size: .6rem;
   }
@@ -438,7 +424,7 @@ main .second-container .form-container .form #send-button {
   border: none;
   -webkit-box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
           box-shadow: 2px 2px 7px 0px rgba(131, 131, 131, 0.432);
-  margin: 1rem 0 0 0;
+  margin: .5rem 0 0 0;
   border-radius: 5px;
   outline: none;
   -webkit-appearance: none;
@@ -454,7 +440,7 @@ main .second-container .form-container .form #send-button {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   main .second-container .form-container .form #send-button {
     width: 9rem;
     height: 3.3rem;
@@ -486,13 +472,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 3% 0;
-}
-
-@media only screen and (min-width: 1024px) {
-  footer {
-    padding: 5% 0 3% 0;
-  }
+  margin-top: 8%;
 }
 
 footer::before {
@@ -500,18 +480,28 @@ footer::before {
   position: relative;
   width: 2rem;
   height: .3rem;
-  left: -33vw;
+  left: -37.5%;
   top: -1.5rem;
   background-color: #ffd200;
   border-radius: 4px;
+}
+
+@media only screen and (min-device-width: 1024px) {
+  footer::before {
+    left: -31%;
+    top: -3rem;
+    width: 3rem;
+    height: .5rem;
+  }
 }
 
 footer .footer-nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
@@ -520,18 +510,26 @@ footer .footer-nav-container {
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
-  width: 75%;
-  padding-bottom: 2%;
+  width: 85%;
+  padding-bottom: 5%;
   border-bottom: 0.1px solid #a8a8a8;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  footer .footer-nav-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  footer .footer-nav-container {
+    width: 65%;
+  }
 }
 
 footer .footer-nav {
   font-size: 0.55rem;
   font-weight: 500;
-}
-
-footer .footer-nav:last-child {
-  margin-right: 0;
 }
 
 footer .footer-nav h4 {
@@ -585,7 +583,7 @@ footer .footer-nav ul li a:hover {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   footer .footer-nav {
     font-size: .9rem;
   }
@@ -633,7 +631,7 @@ footer .footer-nav .social-media-container a div.facebook-icon {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   footer .footer-nav .social-media-container a div.instagram-icon {
     width: 2.34rem;
     height: 2.3rem;
@@ -660,7 +658,7 @@ footer .footer-nav .login a:hover {
 }
 
 .copyright {
-  margin-top: 2%;
+  margin: 5% 0;
   font-size: 0.3rem;
   font-weight: 500;
   position: relative;
@@ -674,7 +672,7 @@ footer .footer-nav .login a:hover {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
   .copyright {
     font-size: .9rem;
   }

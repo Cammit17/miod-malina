@@ -139,7 +139,7 @@
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-device-width: 800px) {
   .desktop-menu .menu {
     font-size: 1.4rem;
     font-weight: 600;
@@ -151,10 +151,10 @@
     display: flex;
   }
   .desktop-menu .menu ul li {
-    margin-right: 1rem;
+    margin-right: 3rem;
   }
   .desktop-menu .menu ul li a {
-    color: #383838;
+    color: black;
     text-decoration: none;
     letter-spacing: 1.2px;
   }
@@ -162,9 +162,6 @@
     -webkit-transition: color .5s ease;
     transition: color .5s ease;
     color: gray;
-  }
-  .desktop-menu .menu ul li:last-child {
-    margin-right: 0;
   }
 }
 /*# sourceMappingURL=menu.css.map */
