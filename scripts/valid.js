@@ -49,7 +49,7 @@ class validation{
         let isValid = true;
         
         if(pattern !== null){
-            const reg = new RegExp (pattern, 'gi');
+            const reg = new RegExp (pattern, '/gi');
             
             if(!reg.test(input.value)){
                 isValid = false;
@@ -74,7 +74,7 @@ class validation{
 
     testEmailInput(input){
         const pattern = input.pattern;
-        const reg = new RegExp(pattern, 'gi');
+        const reg = new RegExp(pattern, '/gi');
         let isValid = true;
 
         if(pattern !== null){
